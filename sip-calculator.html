@@ -1,0 +1,831 @@
+<html data-wf-domain="gopocket.webflow.io" data-wf-page="65991231fa97c2686775609b"
+    data-wf-site="64b92362210c9c95c3459af6"
+    class="w-mod-js w-mod-ix wf-livvic-n4-active wf-livvic-n5-active wf-livvic-n6-active wf-livvic-n7-active wf-livvic-n9-active wf-inter-n4-active wf-inter-n5-active wf-inter-n6-active wf-inter-n7-active wf-inter-n3-active wf-active">
+
+<head>
+    <style>
+        .wf-force-outline-none[tabindex="-1"]:focus {
+            outline: none;
+        }
+    </style>
+    <meta charset="utf-8">
+    <title>SIP Calculator</title>
+    <meta content="SIP Calculator" property="og:title">
+    <meta content="SIP Calculator" property="twitter:title">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Webflow" name="generator">
+    <link href="https://assets-global.website-files.com/64b92362210c9c95c3459af6/css/gopocket.webflow.fef8efccb.css"
+        rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Livvic:regular,500,600,700,900%7CInter:300,regular,500,600,700"
+        media="all">
+    <script type="text/javascript">
+        WebFont.load({
+            google: {
+                families: ["Livvic:regular,500,600,700,900", "Inter:300,regular,500,600,700"]
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        ! function (o, c) {
+            var n = c.documentElement,
+                t = " w-mod-";
+            n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+        }(window, document);
+    </script>
+    <link href="https://assets-global.website-files.com/64b92362210c9c95c3459af6/6597ee0d9bb038a70251862f_Favicon.ico"
+        rel="shortcut icon" type="image/x-icon">
+    <link
+        href="https://assets-global.website-files.com/64b92362210c9c95c3459af6/6597a2013238bf3fe81d4cd2_GO%20256%20x%20256%20pixel.jpg"
+        rel="apple-touch-icon">
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9J0TLQV34W"></script>
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('set', 'developer_id.dZGVlNj', true);
+        gtag('config', 'G-9J0TLQV34W');
+    </script>
+    <!-- Fancy Box -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+        referrerpolicy="no-referrer">
+    <style>
+        /* fancybox */
+        .fancybox-container iframe {
+            width: 100%;
+        }
+
+        .fancybox-can-pan .fancybox-content,
+        .fancybox-can-swipe .fancybox-content {
+            cursor: grab;
+            background: transparent;
+        }
+
+        .fancybox-slide--html .fancybox-close-small {
+            color: currentColor;
+            padding: 10px;
+            right: 0;
+            top: 0;
+            color: white;
+        }
+
+        .fancybox-content {
+            padding: 0;
+            width: 100%;
+        }
+
+        div#open-popup {
+            max-width: 600px;
+        }
+
+        body .fancybox-slide {
+            width: 98%;
+            left: 1%;
+        }
+
+        @media screen and (min-width: 998px) {
+            body .fancybox-slide {
+                width: 80%;
+                left: 10%;
+            }
+        }
+
+        @media screen and (min-width: 1366px) {
+            body .fancybox-slide {
+                width: 60%;
+                left: 20%;
+            }
+        }
+    </style>
+
+    <!-- CSS Style for Range Slider-->
+
+    <style>
+        .range {
+            width: 100%;
+            height: 15px;
+            -webkit-appearance: none;
+            background-color: #dde0ff;
+            outline: none;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #753ed7;
+            cursor: pointer;
+            border: 3px solid #ffffff9c;
+            box-shadow: -407px 0 0 400px #753ed7;
+        }
+    </style>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1148.0" data-gr-ext-installed="">
+    <div class="page-wrapper">
+
+        <section class="emi-calculator">
+            <div class="emi-container">
+                <div class="emi-area">
+                    <h1>SIP Calculator</h1>
+                    <div>
+                        <div data-current="Tab 1" data-easing="ease" data-duration-in="300" data-duration-out="100"
+                            class="emi-tab w-tabs">
+                            <div class="emi-tab-menu-wrap w-tab-menu" role="tablist">
+                                <a data-w-tab="Tab 1" class="emi-tab-menu w-inline-block w-tab-link w--current"
+                                    style="color: rgb(117, 62, 215);" id="w-tabs-0-data-w-tab-0"
+                                    href="#w-tabs-0-data-w-pane-0" role="tab" aria-controls="w-tabs-0-data-w-pane-0"
+                                    aria-selected="true">
+                                    <div class="emi-tab-menu-circle-area" style="background-color: rgb(117, 62, 215);">
+                                        <div class="emi-tab-menu-circle"></div>
+                                    </div>
+                                    <div>SIP Investment</div>
+                                </a>
+                                <a data-w-tab="Tab 2" class="emi-tab-menu w-inline-block w-tab-link"
+                                    style="color: rgb(7, 10, 38);" tabindex="-1" id="w-tabs-0-data-w-tab-1"
+                                    href="#w-tabs-0-data-w-pane-1" role="tab" aria-controls="w-tabs-0-data-w-pane-1"
+                                    aria-selected="false">
+                                    <div class="emi-tab-menu-circle-area" style="background-color: rgb(255, 255, 255);">
+                                        <div class="emi-tab-menu-circle"></div>
+                                    </div>
+                                    <div>Lumpsum</div>
+                                </a>
+                                <a data-w-tab="Tab 3" class="emi-tab-menu w-inline-block w-tab-link"
+                                    style="color: rgb(7, 10, 38);" tabindex="-1" id="w-tabs-0-data-w-tab-2"
+                                    href="#w-tabs-0-data-w-pane-2" role="tab" aria-controls="w-tabs-0-data-w-pane-2"
+                                    aria-selected="false">
+                                    <div class="emi-tab-menu-circle-area" style="background-color: rgb(255, 255, 255);">
+                                        <div class="emi-tab-menu-circle"></div>
+                                    </div>
+                                    <div>SIP and Lumpsum</div>
+                                </a>
+                            </div>
+                            <div class="emi-tab-content-area w-tab-content">
+                                <div data-w-tab="Tab 1" class="emi-tab-pane w-tab-pane w--tab-active"
+                                    id="w-tabs-0-data-w-pane-0" role="tabpanel" aria-labelledby="w-tabs-0-data-w-tab-0">
+                                    <div class="emi-calculator-area">
+                                        <div class="emi-form w-form">
+                                            <form id="sip-calc-form" name="email-form" data-name="Email Form"
+                                                method="get" class="emi-form-block"
+                                                data-wf-page-id="6593cf5054176ac668a588f9"
+                                                data-wf-element-id="cf3c1858-0480-be40-7928-8d9959d51611"
+                                                aria-label="Email Form" data-gtm-form-interact-id="0"><!-- ID changed-->
+                                                <div class="emi-calculator-form-area">
+                                                    <div class="emi-calculator-form-wrap">
+                                                        <label for="name">Monthly Investment</label>
+                                                        <div class="emi-calculator-input-area">
+                                                            <div>₹</div>
+                                                            <input class="emi-calculator-input sip-amount w-input"
+                                                                type="number" id="sipInvestment" min="500" max="50000"
+                                                                step="500" value="2000"><!-- Element Changed-->
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <input class="range" type="range" id="sipInvestmentRangeAmount"
+                                                            min="500" max="50000" step="500"
+                                                            value="2000"><!-- Element Updated For Range Slider-->
+                                                    </div>
+                                                </div>
+                                                <div class="emi-calculator-form-area">
+                                                    <div class="emi-calculator-form-wrap">
+                                                        <label for="name-3">Yearly Returns %</label>
+                                                        <div class="emi-calculator-input-area">
+                                                            <input class="emi-calculator-input sip-period w-input"
+                                                                type="number" id="sipReturnRate" min="1" max="50"
+                                                                step="0.1" value="12"><!--  Element Changed-->
+                                                            <div>%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <input class="range" type="range" id="sipReturnRangeRate"
+                                                            min="1" max="50" step="0.1"
+                                                            value="12"><!-- Element Updated For Range Slider-->
+                                                    </div>
+                                                </div>
+                                                <div class="emi-calculator-form-area">
+                                                    <div class="emi-calculator-form-wrap">
+                                                        <label for="name-2">Invetsment Period</label>
+                                                        <div class="emi-calculator-input-area">
+                                                            <input class="emi-calculator-input sip-percentage w-input"
+                                                                type="number" id="sipTimePeriod" min="1" max="25"
+                                                                step="0.5" value="12"><!--  Element  Changed-->
+                                                            <div>Years</div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <input class="range" type="range" id="sipTimeRangePeriod"
+                                                            min="1" max="20" step="0.5"
+                                                            value="12"><!-- Element Updated For Range Slider-->
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="w-form-done" tabindex="-1" role="region"
+                                                aria-label="Email Form success">
+                                                <div>Thank you! Your submission has been received!</div>
+                                            </div>
+                                            <div class="w-form-fail" tabindex="-1" role="region"
+                                                aria-label="Email Form failure">
+                                                <div>Oops! Something went wrong while submitting the form.</div>
+                                            </div>
+                                        </div>
+                                        <div class="emi-explain-area">
+                                            <div class="emi-define-area">
+                                                <div class="principle-area">
+                                                    <div class="principle-div"></div>
+                                                    <div>Principle</div>
+                                                </div>
+                                                <div class="interest-area">
+                                                    <div class="interest-div"></div>
+                                                    <div>Interest</div>
+                                                </div>
+                                            </div>
+                                            <div class="emi-rate-area">
+                                                <div id="chartContainer"
+                                                    style="position: relative; height: 200px; width: 200px;">
+                                                    <canvas id="sipChart" width="200" height="200"></canvas>
+                                                </div><!-- Added Div for chart-->
+                                                <div class="emi-rate-div-wrap">
+                                                    <div class="emi-sub-rates-area">
+                                                        <div class="emi-rate-title">Total Investment:</div>
+                                                        <div class="emi-rate-title">Total Earned:</div>
+                                                        <div class="emi-rate-title">Extra You Earned:</div>
+                                                    </div>
+                                                    <div class="emi-amount-area">
+                                                        <div class="emi-amount-wrap">
+                                                            <div class="sip-interest-amount span">₹</div>
+                                                            <div class="sip-interest-amount amount"
+                                                                id="sipTotalInvestment">
+                                                                00</div><!--ID Added -->
+                                                        </div>
+                                                        <div class="emi-amount-wrap">
+                                                            <div class="sip-monthly-emi span">₹</div>
+                                                            <div class="sip-monthly-emi amount" id="sipTotalEarn">00
+                                                            </div> <!--ID Added -->
+                                                        </div>
+                                                        <div class="emi-amount-wrap">
+                                                            <div class="sip-principle-amount span">₹</div>
+                                                            <div class="sip-principle-amount amount"
+                                                                id="sipExtraEarned">00</div>
+                                                            <!--ID Added -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-w-tab="Tab 2" class="emi-tab-pane w-tab-pane " id="w-tabs-0-data-w-pane-1"
+                                    role="tabpanel" aria-labelledby="w-tabs-0-data-w-tab-1">
+                                    <div class="emi-calculator-area">
+                                        <div class="emi-form w-form">
+                                            <form id="lumpsum-calc-form" name="email-form" data-name="Email Form"
+                                                method="get" class="emi-form-block"
+                                                data-wf-page-id="6593cf5054176ac668a588f9"
+                                                data-wf-element-id="cf3c1858-0480-be40-7928-8d9959d51611"
+                                                aria-label="Email Form" data-gtm-form-interact-id="0"><!-- ID changed-->
+                                                <div class="emi-calculator-form-area">
+                                                    <div class="emi-calculator-form-wrap">
+                                                        <label for="name">Total Investment</label>
+                                                        <div class="emi-calculator-input-area">
+                                                            <div>₹</div>
+                                                            <input class="emi-calculator-input sip-amount w-input"
+                                                                type="number" id="lumpsumInvestment" min="10000"
+                                                                max="1000000" step="5000"
+                                                                value="200000"><!-- Element Changed-->
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <input class="range" type="range"
+                                                            id="lumpsumInvestmentRangeAmount" min="10000" max="1000000"
+                                                            step="5000"
+                                                            value="200000"><!-- Element Updated For Range Slider-->
+                                                    </div>
+                                                </div>
+                                                <div class="emi-calculator-form-area">
+                                                    <div class="emi-calculator-form-wrap">
+                                                        <label for="name-3">Yearly Returns %</label>
+                                                        <div class="emi-calculator-input-area">
+                                                            <input class="emi-calculator-input sip-period w-input"
+                                                                type="number" id="lumpsumReturnRate" min="1" max="50"
+                                                                step="0.1" value="12"><!--  Element Changed-->
+                                                            <div>%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <input class="range" type="range" id="lumpsumReturnRangeRate"
+                                                            min="1" max="50" step="0.1"
+                                                            value="12"><!-- Element Updated For Range Slider-->
+                                                    </div>
+                                                </div>
+                                                <div class="emi-calculator-form-area">
+                                                    <div class="emi-calculator-form-wrap">
+                                                        <label for="name-2">Invetsment Period</label>
+                                                        <div class="emi-calculator-input-area">
+                                                            <input class="emi-calculator-input sip-percentage w-input"
+                                                                type="number" id="lumpsumTimePeriod" min="1" max="25"
+                                                                step="0.5" value="12"><!--  Element  Changed-->
+                                                            <div>Years</div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <input class="range" type="range" id="lumpsumTimeRangePeriod"
+                                                            min="1" max="25" step="0.5"
+                                                            value="12"><!-- Element Updated For Range Slider-->
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="w-form-done" tabindex="-1" role="region"
+                                                aria-label="Email Form success">
+                                                <div>Thank you! Your submission has been received!</div>
+                                            </div>
+                                            <div class="w-form-fail" tabindex="-1" role="region"
+                                                aria-label="Email Form failure">
+                                                <div>Oops! Something went wrong while submitting the form.</div>
+                                            </div>
+                                        </div>
+                                        <div class="emi-explain-area">
+                                            <div class="emi-define-area">
+                                                <div class="principle-area">
+                                                    <div class="principle-div"></div>
+                                                    <div>Principle</div>
+                                                </div>
+                                                <div class="interest-area">
+                                                    <div class="interest-div"></div>
+                                                    <div>Interest</div>
+                                                </div>
+                                            </div>
+                                            <div class="emi-rate-area">
+                                                <div id="chartContainer"
+                                                    style="position: relative; height: 200px; width: 200px;">
+                                                    <canvas id="lumpsumChart" width="200" height="200"></canvas>
+                                                </div><!-- Added Div for chart-->
+                                                <div class="emi-rate-div-wrap">
+                                                    <div class="emi-sub-rates-area">
+                                                        <div class="emi-rate-title">Total Wealth:</div>
+                                                        <div class="emi-rate-title">Your Returns:</div>
+                                                    </div>
+                                                    <div class="emi-amount-area">
+                                                        <div class="emi-amount-wrap">
+                                                            <div class="sip-interest-amount span">₹</div>
+                                                            <div class="sip-interest-amount amount"
+                                                                id="lumpsumFinalAmount">
+                                                                00</div><!--ID Added -->
+                                                        </div>
+                                                        <div class="emi-amount-wrap">
+                                                            <div class="sip-monthly-emi span">₹</div>
+                                                            <div class="sip-monthly-emi amount" id="lumpsumTotalReturn">
+                                                                00
+                                                            </div> <!--ID Added -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-w-tab="Tab 3" class="emi-tab-pane w-tab-pane " id="w-tabs-0-data-w-pane-2"
+                                    role="tabpanel" aria-labelledby="w-tabs-0-data-w-tab-2">
+                                    <div class="emi-calculator-area">
+                                        <div class="emi-form w-form">
+                                            <form id="lumpsum-sip-calc-form" name="email-form" data-name="Email Form"
+                                                method="get" class="emi-form-block"
+                                                data-wf-page-id="6593cf5054176ac668a588f9"
+                                                data-wf-element-id="fc403a3d-f360-e186-9a99-d7ee5b471c9a"
+                                                aria-label="Email Form">
+                                                <!-- ID changed-->
+                                                <div class="emi-calculator-form-area">
+                                                    <div class="emi-calculator-form-wrap">
+                                                        <label for="name">Lumpsum Investment</label>
+                                                        <div class="emi-calculator-input-area">
+                                                            <div>₹</div>
+                                                            <input class="emi-calculator-input sip-amount w-input"
+                                                                type="number" id="lsLumpsumInvestment" min="10000"
+                                                                max="1000000" step="5000"
+                                                                value="200000"><!-- Element Changed-->
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <input class="range" type="range" id="lsLumpsumRangeAmount"
+                                                            min="10000" max="1000000" step="5000"
+                                                            value="200000"><!-- Element Updated For Range Slider-->
+                                                    </div>
+                                                </div>
+                                                <div class="emi-calculator-form-area">
+                                                    <div class="emi-calculator-form-wrap">
+                                                        <label for="name">Monthly Investment</label>
+                                                        <div class="emi-calculator-input-area">
+                                                            <div>₹</div>
+                                                            <input class="emi-calculator-input sip-amount w-input"
+                                                                type="number" id="lsSipInvetment" min="500" max="50000"
+                                                                step="500" value="2000"><!-- Element Changed-->
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <input class="range" type="range" id="lsSipRangeAmount"
+                                                            min="500" max="50000" step="500"
+                                                            value="2000"><!-- Element Updated For Range Slider-->
+                                                    </div>
+                                                </div>
+                                                <div class="emi-calculator-form-area">
+                                                    <div class="emi-calculator-form-wrap">
+                                                        <label for="name">Expected Return Rate</label>
+                                                        <div class="emi-calculator-input-area">
+                                                            <input class="emi-calculator-input sip-period w-input"
+                                                                type="number" id="lsReturnRate" min="1" max="50"
+                                                                step="0.1" value="12"><!--  Element Changed-->
+                                                            <div>%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <input class="range" type="range" id="lsReturnRangeRate" min="1"
+                                                            max="50" step="0.1"
+                                                            value="12"><!-- Element Updated For Range Slider-->
+                                                    </div>
+                                                </div>
+                                                <div class="emi-calculator-form-area">
+                                                    <div class="emi-calculator-form-wrap">
+                                                        <label for="name">Time period</label>
+                                                        <div class="emi-calculator-input-area">
+                                                            <input class="emi-calculator-input sip-percentage w-input"
+                                                                type="number" id="lsTimePeriod" min="1" max="25"
+                                                                step="0.5" value="12"><!--  Element  Changed-->
+                                                            <div>Years</div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <input class="range" type="range" id="lsTimeRangePeriod" min="1"
+                                                            max="50" step="0.1"
+                                                            value="12"><!-- Element Updated For Range Slider-->
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="w-form-done" tabindex="-1" role="region"
+                                                aria-label="Email Form success">
+                                                <div>Thank you! Your submission has been received!</div>
+                                            </div>
+                                            <div class="w-form-fail" tabindex="-1" role="region"
+                                                aria-label="Email Form failure">
+                                                <div>Oops! Something went wrong while submitting the form.</div>
+                                            </div>
+                                        </div>
+                                        <div class="emi-explain-area">
+                                            <div class="emi-define-area">
+                                                <div class="principle-area">
+                                                    <div class="principle-div"></div>
+                                                    <div>Principle</div>
+                                                </div>
+                                                <div class="interest-area">
+                                                    <div class="interest-div"></div>
+                                                    <div>Interest</div>
+                                                </div>
+                                            </div>
+                                            <div class="emi-rate-area">
+                                                <div id="chartContainer"
+                                                    style="position: relative; height: 200px; width: 200px;">
+                                                    <canvas id="lschart" width="200" height="200"></canvas>
+                                                </div><!-- Added Div for chart-->
+                                                <div class="emi-rate-div-wrap">
+                                                    <div class="emi-sub-rates-area sip-and-lumpsome">
+                                                        <div class="emi-rate-title">Amount invested by you:</div>
+                                                        <div class="emi-rate-title">Lumpsum return:</div>
+                                                        <div class="emi-rate-title">Monthly Investment Grows to (Rs.):
+                                                        </div>
+                                                    </div>
+                                                    <div class="emi-amount-area">
+                                                        <div class="lumpsome-wealth-area">
+                                                            <div class="sip-and-lumpsome-invested span">₹</div>
+                                                            <div class="sip-and-lumpsome-invested amount"
+                                                                id="lsTotalInvest">00
+                                                            </div> <!-- ID added-->
+                                                        </div>
+                                                        <div class="lumpsome-gainer-area">
+                                                            <div class="lumpsome-return span">₹</div>
+                                                            <div class="lumpsome-return amount"
+                                                                id="lsTotalLumpsumReturn">00
+                                                            </div>
+                                                            <!-- ID added-->
+                                                        </div>
+                                                        <div class="lumpsome-gainer-area">
+                                                            <div class="lumpsome-investment span">₹</div>
+                                                            <div class="lumpsome-investment amount"
+                                                                id="lsTotalSipReturn">00
+                                                            </div>
+                                                            <!-- ID added-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- jQuery and Chart.js scripts -->
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Script for Calculations-->
+
+    <script>
+        $(document).ready(function () {
+            // Function to calculate SIP
+            function calculateSIP() {
+                var sipInvestment = parseFloat($("#sipInvestment").val()) || 0;
+                var sipReturnRate = parseFloat($("#sipReturnRate").val()) / 100;
+                var sipTimePeriod = parseFloat($("#sipTimePeriod").val());
+
+                // Calculations
+                var sipTotalInvestment = (sipTimePeriod * 12) * sipInvestment;
+                var sipTotalEarn = Math.round(sipInvestment * (((Math.pow(1 + (sipReturnRate / 12), sipTimePeriod * 12)) - 1) / (sipReturnRate / 12)) * (1 + (sipReturnRate / 12)));
+                var sipExtraEarned = sipTotalEarn - sipTotalInvestment;
+
+                // Results
+                $("#sipTotalInvestment").text(sipTotalInvestment);
+                $("#sipTotalEarn").text(sipTotalEarn);
+                $("#sipExtraEarned").text(sipExtraEarned);
+
+                // Update pie chart
+                updateSIPChart(sipTotalInvestment, sipExtraEarned);
+            }
+
+            var sipChart;  // Unique variable for SIP chart instance
+
+            function updateSIPChart(sipTotalInvestment, sipExtraEarned) {
+                var sipctx = document.getElementById('sipChart').getContext('2d');
+                var data = {
+                    datasets: [{
+                        data: [sipTotalInvestment, sipExtraEarned],
+                        backgroundColor: ['#753ed7', '#000'],
+                        hoverBackgroundColor: ['#753ed7', '#000']
+                    }]
+                };
+
+                var sipChartOptions = {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                        animateRotate: true,
+                        animateScale: true
+
+                    }
+                };
+
+                if (sipChart) {
+                    // If chart exists, update it
+                    sipChart.data = data;
+                    sipChart.update();
+                } else {
+                    // If chart doesn't exist, create a new one
+                    sipChart = new Chart(sipctx, {
+                        type: 'pie',
+                        data: data,
+                        sipChartOptions: sipChartOptions
+                    });
+                }
+            }
+
+
+            // Function to update range slider when number input changes
+            function updateSliderFromNumberInput(inputId, sliderId) {
+                $(inputId).on('input', function () {
+                    $(sliderId).val($(this).val());
+                    calculateSIP(); // Recalculate SIP when input changes
+                });
+            }
+
+            // Function to update number input when range slider changes
+            function updateNumberInputFromSlider(sliderId, inputId) {
+                $(sliderId).on('input', function () {
+                    $(inputId).val($(this).val());
+                    calculateSIP(); // Recalculate SIP when slider changes
+                });
+            }
+
+            // Initialize input and slider synchronization
+            updateSliderFromNumberInput("#sipInvestment", "#sipInvestmentRangeAmount");
+            updateNumberInputFromSlider("#sipInvestmentRangeAmount", "#sipInvestment");
+
+            updateSliderFromNumberInput("#sipReturnRate", "#sipReturnRangeRate");
+            updateNumberInputFromSlider("#sipReturnRangeRate", "#sipReturnRate");
+
+            updateSliderFromNumberInput("#sipTimePeriod", "#sipTimeRangePeriod");
+            updateNumberInputFromSlider("#sipTimeRangePeriod", "#sipTimePeriod");
+
+            // Initial SIP calculation
+            calculateSIP();
+
+
+            //Script for LumpSum Calculations
+
+
+            // Function to calculate Lumpsum
+            function calculatelumpsum() {
+                var lumpsumInvestment = parseFloat($("#lumpsumInvestment").val()) || 0;
+                var lumpsumReturnRate = parseFloat($("#lumpsumReturnRate").val()) / 100;
+                var lumpsumTimePeriod = parseFloat($("#lumpsumTimePeriod").val());
+
+                // Lumpsum calculation formula with rounding
+                var lumpsumFinalAmount = Math.round(lumpsumInvestment * Math.pow(1 + lumpsumReturnRate, lumpsumTimePeriod));
+
+                // Calculate total interest
+                var lumpsumTotalReturn = lumpsumFinalAmount - lumpsumInvestment;
+
+                // Display the result with breakdown
+                $("#lumpsumFinalAmount").text(lumpsumFinalAmount);
+                $("#lumpsumTotalReturn").text(lumpsumTotalReturn);
+
+                // Update pie chart
+                updateLumpsumChart(lumpsumInvestment, lumpsumTotalReturn);
+            }
+
+            var lumpsumChart;  // Unique variable for Lumpsum chart instance
+
+            function updateLumpsumChart(lumpsumInvestment, lumpsumTotalReturn) {
+                var lumpsumctx = document.getElementById('lumpsumChart').getContext('2d');
+                var data = {
+                    datasets: [{
+                        data: [lumpsumInvestment, lumpsumTotalReturn],
+                        backgroundColor: ['#753ed7', '#000'],
+                        hoverBackgroundColor: ['#753ed7', '#000']
+                    }]
+                };
+
+                var lumpsumChartOptions = {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                        animateRotate: true,
+                        animateScale: true
+
+                    }
+                };
+
+                if (lumpsumChart) {
+                    // If chart exists, update it
+                    lumpsumChart.data = data;
+                    lumpsumChart.update();
+                } else {
+                    // If chart doesn't exist, create a new one
+                    lumpsumChart = new Chart(lumpsumctx, {
+                        type: 'pie',
+                        data: data,
+                        lumpsumChartOptions: lumpsumChartOptions
+                    });
+                }
+            }
+
+            // Function to update range slider when number input changes
+            function updateSliderFromNumberInput(inputId, sliderId) {
+                $(inputId).on('input', function () {
+                    $(sliderId).val($(this).val());
+                    calculatelumpsum(); // Recalculate lumpsum when input changes
+                });
+            }
+
+            // Function to update number input when range slider changes
+            function updateNumberInputFromSlider(sliderId, inputId) {
+                $(sliderId).on('input', function () {
+                    $(inputId).val($(this).val());
+                    calculatelumpsum(); // Recalculate lumpsum when slider changes
+                });
+            }
+
+            // Initialize input and slider synchronization
+            updateSliderFromNumberInput("#lumpsumInvestment", "#lumpsumInvestmentRangeAmount");
+            updateNumberInputFromSlider("#lumpsumInvestmentRangeAmount", "#lumpsumInvestment");
+
+            updateSliderFromNumberInput("#lumpsumReturnRate", "#lumpsumReturnRangeRate");
+            updateNumberInputFromSlider("#lumpsumReturnRangeRate", "#lumpsumReturnRate");
+
+            updateSliderFromNumberInput("#lumpsumTimePeriod", "#lumpsumTimeRangePeriod");
+            updateNumberInputFromSlider("#lumpsumTimeRangePeriod", "#lumpsumTimePeriod");
+
+            // Initial lumpsum calculation
+            calculatelumpsum();
+
+            //Script for LumpsumSIP Calculations
+
+
+            function calculateLumpsumSIP() {
+                // Get input values
+                var lsLumpsumInvestment = parseFloat($("#lsLumpsumInvestment").val()) || 0;
+                var lsSipInvetment = parseFloat($("#lsSipInvetment").val()) || 0;
+                var lsReturnRate = parseFloat($("#lsReturnRate").val()) / 100; // Convert percentage to decimal
+                var lsTimePeriod = parseFloat($("#lsTimePeriod").val());
+
+                // Calculate investment amounts
+                var lsTotalInvest = lsLumpsumInvestment + (lsSipInvetment * 12 * lsTimePeriod);
+                var lsTotalLumpsumReturn = Math.round(lsLumpsumInvestment * Math.pow(1 + lsReturnRate, lsTimePeriod));
+                var lsTotalSipReturn = Math.round(lsSipInvetment * (((Math.pow(1 + (lsReturnRate / 12), lsTimePeriod * 12)) - 1) / (lsReturnRate / 12)) * (1 + (lsReturnRate / 12)));
+
+                // Display the result
+                $("#lsTotalInvest").text(lsTotalInvest);
+                $("#lsTotalLumpsumReturn").text(lsTotalLumpsumReturn);
+                $("#lsTotalSipReturn").text(lsTotalSipReturn);
+
+                // Update pie chart
+                updateLumpsumSIPChart(lsTotalInvest, lsTotalLumpsumReturn, lsTotalSipReturn);
+            }
+
+            // Function to update the pie chart
+            function updateLumpsumSIPChart(lsTotalInvest, lsTotalLumpsumReturn, lsTotalSipReturn) {
+                var lumpsumsipctx = document.getElementById('lschart').getContext('2d');
+                var data = {
+                    datasets: [{
+                        data: [lsTotalInvest, lsTotalLumpsumReturn, lsTotalSipReturn],
+                        backgroundColor: ['#753ed7', '#dde0ff', '#000'],
+                        hoverBackgroundColor: ['#753ed7', '#dde0ff', '#000'] // Set hover color to the same as the normal color
+                    }]
+                };
+
+                var lumpsumSIPChartOptions = {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                        animateRotate: true,
+                        animateScale: true
+
+                    }
+                };
+
+                if (window.lsPie) {
+                    // If chart exists, update it
+                    window.lsPie.data = data;
+                    window.lsPie.update();
+                } else {
+                    // If chart doesn't exist, create a new one
+                    window.lsPie = new Chart(lumpsumsipctx, {
+                        type: 'pie',
+                        data: data,
+                        lumpsumSIPChartOptions: lumpsumSIPChartOptions
+                    });
+                }
+            }
+
+            // Function to update range slider when number input changes
+            function updateSliderFromNumberInput(inputId, sliderId) {
+                $(inputId).on('input', function () {
+                    $(sliderId).val($(this).val());
+                    calculateLumpsumSIP(); // Recalculate LumpsumSIP when input changes
+                });
+            }
+
+            // Function to update number input when range slider changes
+            function updateNumberInputFromSlider(sliderId, inputId) {
+                $(sliderId).on('input', function () {
+                    $(inputId).val($(this).val());
+                    calculateLumpsumSIP(); // Recalculate LumpsumSIP when slider changes
+                });
+            }
+
+            // Initialize input and slider synchronization
+            updateSliderFromNumberInput("#lsLumpsumInvestment", "#lsLumpsumRangeAmount");
+            updateNumberInputFromSlider("#lsLumpsumRangeAmount", "#lsLumpsumInvestment");
+
+            updateSliderFromNumberInput("#lsSipInvetment", "#lsSipRangeAmount");
+            updateNumberInputFromSlider("#lsSipRangeAmount", "#lsSipInvetment");
+
+            updateSliderFromNumberInput("#lsReturnRate", "#lsReturnRangeRate");
+            updateNumberInputFromSlider("#lsReturnRangeRate", "#lsReturnRate");
+
+            updateSliderFromNumberInput("#lsTimePeriod", "#lsTimeRangePeriod");
+            updateNumberInputFromSlider("#lsTimeRangePeriod", "#lsTimePeriod");
+
+            // Initial LumpsumSIP calculation
+            calculateLumpsumSIP();
+
+        });
+
+
+
+
+    </script>
+
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=64b92362210c9c95c3459af6"
+        type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+    <script src="https://assets-global.website-files.com/64b92362210c9c95c3459af6/js/webflow.caa255c5f.js"
+        type="text/javascript"></script>
+    <!-- Fancy Box -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+</body>
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+</html>
